@@ -4,6 +4,6 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
 
-    <StartupObject>Myfirstproject.Loop.Kaprekar</StartupObject>
+    <StartupObject>Myfirstproject.OOPsdemo.StudentDetail</StartupObject>
   </PropertyGroup>
 </Project>
