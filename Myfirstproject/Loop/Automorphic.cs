@@ -13,34 +13,37 @@ namespace Myfirstproject.Loop
 
             int square = 1;
             int count = 0;
-            int Temp = num;
-            while(num>0)
+            int temp = num;
+
+            while (num > 0)
             {
                 int digit = num % 10;
                 count++;
                 num = num / 10;
+            }
+            Console.WriteLine(count);
 
-            }
-            num = Temp;
-            
-                int power = 1;
-                int b = 10;
-                square = num * num;
-            
-            for(int i=1;i<=count;i++)
+            num = temp;
+            int Power = 1;
+            int Base = 10;
+            square = num * num;
+
+            for (int i = 1; i <= count; i++)
             {
-                power = power * b;
+                Power = Power * Base;
             }
-            Console.WriteLine(power);
-            int last = square % power;
-            if(num==last)
+            Console.WriteLine(square);
+            int last = square % Power;
+            if (num == last)
+
             {
-                Console.WriteLine("Automorphic");
+                Console.WriteLine("Automorphic:");
             }
             else
             {
-                Console.WriteLine("not Automorphic");
+                Console.WriteLine(" Not a Automorphic:");
             }
+
         }
     }
 }

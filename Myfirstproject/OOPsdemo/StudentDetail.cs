@@ -25,8 +25,8 @@ namespace Myfirstproject.OOPsdemo
         public double calcutePercentage()
         {
             double total = s_m1 + s_m2 + s_m3;
-            double percentage = total / 300 * 100;
-            return percentage;
+            double s_percentage = total / 300 * 100;
+            return s_percentage;
 
         }
         public void Display()
