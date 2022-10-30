@@ -4,6 +4,6 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
 
-    <StartupObject>Myfirstproject.Assignment.Krishanmurthyq8</StartupObject>
+    <StartupObject>Myfirstproject.AssinmentVloop.Power</StartupObject>
   </PropertyGroup>
 </Project>
