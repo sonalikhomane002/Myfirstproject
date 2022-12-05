@@ -6,32 +6,32 @@ namespace Myfirstproject.OOPsdemo
 {
     class StudentDetail
     {
-        public int s_id;
-        public string s_name;
-        public int s_m1;
-        public int s_m2;
-        public int s_m3;
-        public double s_Percentage;
+        public int id;
+        public string name;
+        public int m1;
+        public int m2;
+        public int m3;
+        public double Percentage;
 
         public void Accept_value(int id, string name, int m1, int m2, int m3)
         {
-            s_id = id;
-            s_name = name;
-            s_m1 = m1;
-            s_m2 = m2;
-            s_m3 = m3;
+           this. id = id;
+           this. name = name;
+           this.m1 = m1;
+            this.m2 = m2;
+            this.m3 = m3;
         }
 
         public double calcutePercentage()
         {
-            double total = s_m1 + s_m2 + s_m3;
+            double total = m1 + m2 + m3;
             double s_percentage = total / 300 * 100;
             return s_percentage;
 
         }
         public void Display()
         {
-            Console.WriteLine("student id= "+s_id+"\n"+"student name= "+s_name+"\n"+"marks m1="+s_m1+"\n"+"marks m2="+s_m2+"\n"+"marks m3="+s_m3);
+            Console.WriteLine("student id= "+id+"\n"+"student name= "+name+"\n"+"marks m1="+m1+"\n"+"marks m2="+m2+"\n"+"marks m3="+m3);
             
            
         }
