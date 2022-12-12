@@ -15,7 +15,7 @@ namespace Myfirstproject.Task
             {
 
                 Console.WriteLine(arr[i]);
-               // i++; 
+               
             }
         }
     }

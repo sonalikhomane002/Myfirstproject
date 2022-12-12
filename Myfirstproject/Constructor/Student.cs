@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Myfirstproject.Constructor
 {
-    class Student
+   /* class Student
     {
         int id;
         string name;
@@ -52,7 +52,7 @@ namespace Myfirstproject.Constructor
                 Console.WriteLine(Stud[i].Id + "\t" + Stud[i].Name + "\t" + Stud[i].Marks);
             }
             Console.ReadLine();
-        }
-    }
-
+        }*/
 }
+
+
