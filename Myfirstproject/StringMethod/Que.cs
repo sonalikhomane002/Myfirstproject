@@ -23,4 +23,33 @@ namespace Myfirstproject.StringMethod
             Console.WriteLine(freq);
         }
     }
+    //count occerance of word in string.
+    class Task1111
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("enter string");
+            string str1 = Console.ReadLine();
+            Console.WriteLine("enter the words");
+            string str = Console.ReadLine();
+            
+
+            string[] words = str1.Split(' ');
+            int count = 0;
+            for (int i = 0; i < words.Length; i++)
+            {
+               
+
+                if (str == words[i])
+                {
+                    count++;
+                }
+
+            }
+            Console.WriteLine(count);
+
+
+        }
+        
+    }
 }

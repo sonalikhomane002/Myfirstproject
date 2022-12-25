@@ -352,7 +352,7 @@ namespace Myfirstproject.Task
 
                     count++;
                     sum = (int)(sum + char.GetNumericValue(s[i]));
-                
+
 
                 }
             }
@@ -499,14 +499,14 @@ namespace Myfirstproject.Task
             {
                 if (i > 0 && st[i].Length == st[i - 1].Length)
                 {
-                    Console.Write(" "+st[i]);
+                    Console.Write(" " + st[i]);
                     cnt++;
                 }
             }
 
             if (cnt >= 1 || cnt == 0)
             {
-                Console.WriteLine(" "+st[st.Length - 1]);
+                Console.WriteLine(" " + st[st.Length - 1]);
             }
 
 
@@ -520,7 +520,7 @@ namespace Myfirstproject.Task
     }
     class LongestWord
     {   // write code to find out the longest word from the string
-    
+
         static void Main(string[] args)
         {
             Console.WriteLine("Enter string :");
@@ -540,16 +540,7 @@ namespace Myfirstproject.Task
         }
     }
 
-
-
-
-
-
-
-
-
 }
-
 
 
 

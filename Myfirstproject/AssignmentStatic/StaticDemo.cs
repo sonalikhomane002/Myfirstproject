@@ -56,6 +56,16 @@ namespace Myfirstproject.AssignmentStatic
             Console.ReadKey();
         }
     }
+    class Car
+    {
+        static string model;
+        static int totalcarsold;
 
+       
+
+
+
+
+    }
 
 }

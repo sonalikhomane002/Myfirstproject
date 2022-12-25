@@ -26,16 +26,16 @@ namespace Myfirstproject.Assignmenton2D
         }
         public bool IsUpperTriangular()
         {
-            bool upperTriangular = true;
+            bool upperTriangular = false;
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
                     if (i > j)
                     {
-                        if (matrix[i, j] != 0)
+                        if (matrix[i, j] == 0)
                         {
-                            upperTriangular = false;
+                            upperTriangular = true;
                             break;
                         }
 

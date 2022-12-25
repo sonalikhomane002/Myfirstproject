@@ -165,8 +165,6 @@ namespace Myfirstproject.OOPsdemo
             }
             Console.WriteLine("aternate even no is" + sum);
 
-
-
         }
     }
     class ArrayInsertPos
@@ -387,9 +385,6 @@ namespace Myfirstproject.OOPsdemo
 
             Console.WriteLine("minimum element" + Max);
             Console.WriteLine("maximum element" + Min);
-
-
-
 
         }
     }

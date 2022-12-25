@@ -175,6 +175,7 @@ namespace Myfirstproject.AssignmentOnString
             Console.WriteLine(myName + "  " );
         }
     }
+    //count vowel and consonent
     class Progam24
     {
 

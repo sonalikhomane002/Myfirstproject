@@ -82,8 +82,59 @@ namespace Myfirstproject.Containment
             e.DisplayEmployee();
         }
     }
+    //task 
+   
+    class Student
+    {
+        public int id;
+        public string name;
 
-    
+        public Student(int id,string name)
+        {
+            this.id = id;
+            this.name = name;
+        }
+        public List<int> marks = new List<int>();
 
+    }
     
+    class CustomListDemo4
+    {
+        static void Main(string[] args)
+        {
+            List<Student> sl = new List<Student>();
+            for (int i = 1; i <= 3; i++)
+            {
+                Console.WriteLine("Enter the Student ID  =");
+                int sid = int.Parse(Console.ReadLine());
+                Console.WriteLine("Enter the Student Name =");
+                string sname = Console.ReadLine();
+                Student s = new Student(sid, sname);
+                for (int j = 1; j <= 4; j++)
+                {
+                    Console.WriteLine("Enter the marks m" + i + 1);
+                    int m1 = int.Parse(Console.ReadLine());
+                    s.marks.Add(m1);
+
+                }
+                sl.Add(s);
+            }
+
+                Console.WriteLine(".........................");
+                foreach (var student in sl)
+                {
+                    Console.WriteLine(student.id + " " + student.name + " ");
+                   foreach (int m in student.marks)
+                    {
+                        Console.WriteLine(m);
+                    }
+               
+                }
+
+        }
+    }
+
+
+
+
 }
