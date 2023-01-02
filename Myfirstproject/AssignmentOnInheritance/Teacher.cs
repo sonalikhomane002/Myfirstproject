@@ -241,10 +241,170 @@ namespace Myfirstproject.AssignmentOnInheritance
     }
     //Create interface IceCream with method eat and Juice with method drink, 
     //Create class Mastani which implements both interfaces.
-    interface IceCream
+    interface IIceCream
+    {
+        public void Eat();
+   
+    }
+    interface IJuice
+    {
+        public void Drink();
+        
+    }
+    class Mastani : IIceCream, IJuice
     {
 
+        public void Eat()
+        {
+            Console.WriteLine("eat icecream");
+        }
+        public void Drink()
+        {
+            Console.WriteLine("Drink juice");
+        }
     }
+    class InterfaceDemo1
+    {
+        static void Main(string[] args)
+        {
+            IIceCream i = new Mastani();
+            i.Eat();
+
+            IJuice p = new Mastani();
+            p.Drink();
+        }
+    }
+   /* //6.	Design a class to overload a function volume() as follows:  [2M]
+    (i) double volume(double r) – with radius ‘r’ as an argument, returns the volume of sphere using the formula:
+    v = 4 / 3 × 22 / 7 × r3
+     (ii)double volume(double h, double r) – with height ‘h’ and radius ‘r’ as the arguments, returns the volume of a cylinder using the formula:
+    v = 22 / 7 × r2 × h
+     (iii) double volume(double l, double b, double h) – with length ‘l’, breadth ‘b’ and height ‘h’ as the arguments, returns the volume of a cuboid using the formula:
+    v = l × b × h
+   */
+    public class VolumeCal
+    {
+        double volume(double r)
+        {
+            double vol = (4 / 3.0) * (22 / 7.0) * r * r * r;
+            return vol;
+        }
+
+        double volume(double h, double r)
+        {
+            double vol = (22 / 7.0) * r * r * h;
+            return vol;
+        }
+
+        double volume(double l, double b, double h)
+        {
+            double vol = l * b * h;
+            return vol;
+        }
+
+        public static void Main(String[] args)
+        {
+            VolumeCal obj = new VolumeCal();
+            Console.WriteLine("Sphere Volume = " + obj.volume(6));
+
+            Console.WriteLine("Cylinder Volume = " + obj.volume(5, 3.5));
+
+            Console.WriteLine("Cuboid Volume = " + obj.volume(7.5, 3.5, 2));
+          
+        }
+    }
+    /*Design class Order (int ordered, String Orderdate, Customer cust, Item item)
+      Customer(int custid, String custname, Address address)
+      Address(String addr1, city, int pincode)
+       Item(int itemid, String itemname, int price)
+      Write constructors, properties in respective classes.*/
+
+    class Item
+    {
+        int itemId;
+        string itemName;
+        int price;
+        public Item(int id, string itemname, int Price)
+        {
+            this.itemId = id;
+            this.itemName = itemname;
+            this.price = Price;
+        }
+        public void ShowItem()
+        {
+            Console.WriteLine($"Item Details :=\nItem id : {itemId} \nItem Name : " +
+                $"{itemName} \nPrice : {price}");
+        }
+    }
+    class Address
+    {
+        string Adr1;
+        string city;
+        int pinCode;
+        public Address(string addr1, string city, int PinCode)
+        {
+            this.Adr1 = addr1;
+            this.city = city;
+            this.pinCode = PinCode;
+        }
+        public void ShowAddress()
+        {
+            Console.WriteLine($"Address Details :=\nAddress : {Adr1}" +
+                $"\nCity : {city}\nPinCode : {pinCode} ");
+        }
+    }
+    class Customer
+    {
+        int custid;
+        string custname;
+        Address address;
+        public Customer(int Cust_Id, string custName, Address addr)
+        {
+            this.custid = Cust_Id;
+            this.custname = custName;
+            this.address = addr;
+        }
+        public void ShowCustomer()
+        {
+            Console.WriteLine($"Customer Details :=\nCustomer id : {custid}\n" +
+                $"Customer Name : {custname}");
+            address.ShowAddress();
+        }
+    }
+    class Order
+    {
+        int ordered;
+        string Orderdate;
+        Customer cust;
+        Item item;
+        public Order(int ordered, string OrdDate, Customer Customer, Item item)
+        {
+            this.ordered = ordered;
+            this.Orderdate = OrdDate;
+            this.cust = Customer;
+            this.item = item;
+        }
+        public void ShowOrder()
+        {
+            Console.WriteLine($"Order Details :=\nOrdered : {ordered} \nOrder Date : " +
+                $"{Orderdate}");
+            cust.ShowCustomer();
+            item.ShowItem();
+        }
+    }
+    class Program9
+    {
+        static void Main(string[] args)
+        {
+            Order newOrder = new Order(201, "22/Dec/2022", new Customer(1234, "sonali",
+           new Address("Raghukul Niwas", "pune", 411034)), new Item(511, "Bag", 600));
+
+            newOrder.ShowOrder();
+        }
+    }
+
+
+
 
 
 

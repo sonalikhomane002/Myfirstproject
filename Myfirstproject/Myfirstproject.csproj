@@ -4,6 +4,6 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
 
-    <StartupObject>Myfirstproject.WrittenTest24Dec.Program11</StartupObject>
+    <StartupObject>Myfirstproject.DelegatesDemo.GenericDelDemo</StartupObject>
   </PropertyGroup>
 </Project>

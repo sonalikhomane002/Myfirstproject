@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Myfirstproject.Task
 {
+    
     class Program
     {
         static void Main(string[] args)
@@ -46,11 +47,12 @@ namespace Myfirstproject.Task
             {
                 Console.Write(c + " ");
             }
+            Console.WriteLine("\n........................");
             Console.WriteLine(str.Substring(4));
             Console.WriteLine("......................");
             Console.WriteLine(str.Substring(4, 6));
 
-            string[] mywords = str.Split(",");
+            string[] mywords = str.Split("");
             foreach (string w in mywords)
             {
                 Console.WriteLine(w);
@@ -81,9 +83,9 @@ namespace Myfirstproject.Task
         {
             // Console.WriteLine("Enter the String");
             //  Console.ReadLine();
-            Program3 obj = new Program3();
             string str = "My country is india";
-            str = Console.ReadLine();
+             Console.WriteLine(str);
+            Program3 obj = new Program3();
             Console.WriteLine(obj.Doreverse(str));
 
 

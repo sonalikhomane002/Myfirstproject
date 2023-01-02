@@ -195,7 +195,8 @@ namespace Myfirstproject.WrittenTest24Dec
     {
         static void Main(string[] args)
         {
-            int[] ar = { 4, 6, 5, -10, 8, 5, 20 };
+            int[] ar = { 4, 6, 5, -10, 8, 5, 20,6};
+            List<string> l = new List<string>();
             int num = 10;
             for(int i=0;i<ar.Length;i++)
             {
@@ -203,7 +204,10 @@ namespace Myfirstproject.WrittenTest24Dec
                 {
                     if (ar[i] + ar[j] == num)
                     {
-                        Console.WriteLine($"{ar[i]} +{ar[j]}={num}");
+                       for(int k=0;k<l.Count;k++)
+                        {
+                            //()
+                        }
                     }
             
                 }

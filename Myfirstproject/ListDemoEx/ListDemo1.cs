@@ -42,25 +42,31 @@ namespace Myfirstproject.ListDemoEx
             li.Add(7);
             li.Add(30);
             li.Add(2);
-
+            int count = 0;
             for (int i = 0; i < li.Count; i++)
             {
                 bool isprime = true;
-
                 for (int j = 2; j <= li[i] / 2; j++)
                 {
                     if (li[i] % j == 0)
                     {
                         isprime = false;
+
                         break;
                     }
                 }
+
                 if (isprime == true)
                 {
 
                     Console.WriteLine(li[i]);
+                    count++;
+
                 }
+
             }
+            Console.WriteLine("count="+count);
+
 
         }
     }
@@ -797,11 +803,11 @@ namespace Myfirstproject.ListDemoEx
     {
         public int empno;
         public string ename;
-        public int  deptId;
+        public int deptId;
 
-        
 
-       
+
+
 
         public Employee22(int empno, string ename, int deptId)
         {
@@ -814,10 +820,10 @@ namespace Myfirstproject.ListDemoEx
         {
             List<Employee22> li = new List<Employee22>();
             List<Department2> listOfDept = new List<Department2>();
-            listOfDept.Add(new Department2(1,"IT"));
-            listOfDept.Add(new Department2(2,"HR"));
-            listOfDept.Add(new Department2(3,"CC"));
-            listOfDept.Add(new Department2(4,"AA"));
+            listOfDept.Add(new Department2(1, "IT"));
+            listOfDept.Add(new Department2(2, "HR"));
+            listOfDept.Add(new Department2(3, "CC"));
+            listOfDept.Add(new Department2(4, "AA"));
 
             for (int i = 1; i < 3; i++)
             {
@@ -827,31 +833,41 @@ namespace Myfirstproject.ListDemoEx
                 string ename = Console.ReadLine();
                 Console.WriteLine("enter the Dept Id");
                 int deptId = int.Parse(Console.ReadLine());
-                Employee22 e = new Employee22(empno, ename,deptId);
+                Employee22 e = new Employee22(empno, ename, deptId);
             }
-            int deptid=0;
-            for(int i=0;i<li.Count;i++)
+            int deptid = 0;
+            for (int i = 0; i < li.Count; i++)
             {
-              if(li[i].empno==10)
-              {
+                if (li[i].empno == 10)
+                {
                     deptid = li[i].deptId;
-                
-              }
+
+                }
             }
 
-            for(int i=0;i<li.Count;i++)
+            for (int i = 0; i < li.Count; i++)
             {
-                if(deptid==li[i].deptId)
+                if (deptid == li[i].deptId)
                 {
                     li.RemoveAt(i);
                 }
 
             }
-                
+            foreach(Employee22 e in li)
+            {
+                Console.WriteLine(e);
+            }
+
         }
     }
+   /* Create List<Shipment>in which sorting is done according cities and
+    * if two order have same cities than according to shipment date(Ascending)
+      Shipment class (int shipId, String Cust_name, Address addr, MyDate shipDate)
+      Address class (String addr, String City, String State)*/
+  
+
 }
-    
+
 
 
 

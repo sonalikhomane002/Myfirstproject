@@ -30,23 +30,34 @@ namespace Myfirstproject.StringMethod
         {
             Console.WriteLine("enter string");
             string str1 = Console.ReadLine();
-            Console.WriteLine("enter the words");
-            string str = Console.ReadLine();
             
 
-            string[] words = str1.Split(' ');
-            int count = 0;
+            Dictionary<string, string> dl = new Dictionary<string, string>();
+            string[]words= str1.Split(' ');
+        
             for (int i = 0; i < words.Length; i++)
             {
-               
-
-                if (str == words[i])
+               for(int j=i+1;j<words.Length;j++)
                 {
-                    count++;
+                    if(words[i]==words[j])
+                    {
+
+                        if (!dl.ContainsKey(words[i].ToString()))
+                        {
+                            dl.Add(words[i].ToString(), words[i].ToString());
+                        }
+                       
+                    }
                 }
 
+                
+
             }
-            Console.WriteLine(count);
+            foreach (KeyValuePair<string, string> item in dl)
+            {
+                Console.WriteLine(item.Key.ToString());
+            }
+        
 
 
         }

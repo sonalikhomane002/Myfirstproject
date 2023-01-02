@@ -4,6 +4,8 @@ using System.Text;
 
 namespace Myfirstproject.StringMethod
 {
+    //pattern 
+              
     class str
     {
         static void Main(string[] args)

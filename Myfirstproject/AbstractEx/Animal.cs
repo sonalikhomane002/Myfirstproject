@@ -33,4 +33,20 @@ namespace Myfirstproject.AbstractEx
         }
 
     }
+    abstract class Language
+    {
+        public void Display()
+        {
+            Console.WriteLine("Non abstract method");
+        }
+    }
+    class Program:Language
+    {
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+            program.Display();
+        }
+    }
+   
 }

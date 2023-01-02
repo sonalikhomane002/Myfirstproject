@@ -6,7 +6,7 @@ namespace Myfirstproject.SealedKeyword
 {
     class Flower
     {
-        
+
         public virtual void MakeDecoration()
         {
             Console.WriteLine("Flower is used for decoration");
@@ -14,9 +14,9 @@ namespace Myfirstproject.SealedKeyword
 
     }
 
-    class Rose : Flower//can nit inherit seals class
+    class Rose : Flower//can not inherit seals class
     {
-        public  override void MakeDecoration()
+        public override void MakeDecoration()
         {
             // base.MakeDecoration();
             Console.WriteLine("Rose is used for decoration");
@@ -28,17 +28,6 @@ namespace Myfirstproject.SealedKeyword
         {
             //base.MakeDecoration()
             Console.WriteLine("Red Rose is used for decoration");
-        }
-    }
-    class SealedDemo
-    {
-        static void Main(string[] args)
-        {
-            Flower f = new Rose();
-            f.MakeDecoration();
-
-            Rose r = new RedRose();
-            r.MakeDecoration();
         }
     }
 }

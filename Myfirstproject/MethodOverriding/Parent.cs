@@ -62,5 +62,35 @@ namespace Myfirstproject.MethodOverriding
             }
         }
     }
+    //5.	Write a  program to show the use of method overriding.
+    class Class1
+    {
+     
+        public virtual void Show()
+        {
+  
+            Console.WriteLine("Parent Class Show Method");
+        }
+    }
+    class Class2 : Class1
+    {
+     
+        public override void Show()
+        {
+           
+            Console.WriteLine("Child Class Show Method");
+        }
+    }
 
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Class1 obj1 = new Class2();
+            obj1.Show();
+            Class2 obj2 = new Class2();
+            obj2.Show();
+            Console.ReadKey();
+        }
+    }
 }
